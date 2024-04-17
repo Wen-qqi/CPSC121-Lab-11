@@ -1,9 +1,8 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Wen Fan
+// CPSC 121L - 11
+// April 22, 2024
+// WenFan@csu.fullerton.edu
+// @Wen-qqi
 //
 // Lab 11-1
 // If it is a pair programming lab please specify partner below.
@@ -34,6 +33,7 @@ int main() {
   // 1. Print out the total number of customers waiting
   //    in line by invoking TotalCustomersInLine.
   // ======================================================
+  std::cout << adele->TotalCustomersInLine();
   std::cout << std::endl;
 
   std::cout << "Total products to be purchased: ";
@@ -41,6 +41,7 @@ int main() {
   // 2. Print out the total number of products held by
   //    customers in line by invoking TotalProductsInLine.
   // ======================================================
+  std::cout << adele->TotalProductsInLine();
   std::cout << std::endl;
 
   std::cout << "First customer name alphabetically: ";
@@ -49,6 +50,7 @@ int main() {
   //    name comes first alphabetically by invoking
   //    FirstAlphabeticalCustomerInLine.
   // ======================================================
+  std::cout << adele->FirstAlphabeticalCustomerInLine();
   std::cout << std::endl;
   return 0;
 }
