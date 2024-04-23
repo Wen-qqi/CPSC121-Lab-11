@@ -1,9 +1,8 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Wen Fan
+// CPSC 121L - 11
+// April 22, 2024
+// WenFan@csu.fullerton.edu
+// @Wen-qqi
 //
 // Lab 11-2
 // If it is a pair programming lab please specify partner below.
@@ -37,6 +36,7 @@ int main() {
   //    train by invoking TotalTrainPassengers on the
   //    first carriage in the train (the locomotive).
   // ======================================================
+  std::cout << locomotive->TotalTrainPassengers();
   std::cout << std::endl;
 
   std::cout << "Max passengers in a carriage: ";
@@ -45,8 +45,8 @@ int main() {
   //    single carriage in the train by invoking
   //    MaxCarriagePassengers.
   // ======================================================
+  std::cout << locomotive->MaxCarriagePassengers();
   std::cout << std::endl;
-
   // =================== YOUR CODE HERE ===================
   // 3. Using IsTrainFull, check if the locomotive is full.
   //    If IsTrainFull returns true, print
@@ -54,8 +54,11 @@ int main() {
   //    If IsTrainFull returns false, print
   //          "The train has available seats."
   // ======================================================
-  std::cout << std::endl;
-
+  if (locomotive->IsTrainFull()) {
+    std::cout << "The train is full." << std::endl;
+  } else {
+    std::cout << "The train has available seats." << std::endl;
+  }
   // =================== YOUR CODE HERE ===================
   // 4. Create a new std::shared_ptr<Train>. You may name
   //    it the `caboose`, which refers to the carriage at
@@ -63,13 +66,13 @@ int main() {
   //    Set its passenger count to 40, seat count to
   //    75, and next carriage to `nullptr`.
   // ======================================================
-
+  std::shared_ptr<Train> caboose = std::make_shared<Train>(40, 75, nullptr);
   std::cout << "Adding a new carriage to the train!" << std::endl;
   // =================== YOUR CODE HERE ===================
   // 5. Using `AddCarriageToEnd`, add the new Train you've
   //    created in #4 to the end of the `locomotive`.
   // ======================================================
-
+  locomotive->AddCarriageToEnd(caboose);
   // =================== YOUR CODE HERE ===================
   // 6. Using IsTrainFull, check if the locomotive is full.
   //    If IsTrainFull returns true, print
@@ -77,6 +80,10 @@ int main() {
   //    If IsTrainFull returns false, print
   //          "The train now has available seats."
   // ======================================================
-  std::cout << std::endl;
+  if (locomotive->IsTrainFull()) {
+    std::cout << "The train is now full." << std::endl;
+  } else {
+    std::cout << "The train now has available seats." << std::endl;
+  }
   return 0;
 }
