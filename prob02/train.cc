@@ -1,9 +1,8 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Wen Fan
+// CPSC 121L - 11
+// April 22, 2024
+// WenFan@csu.fullerton.edu
+// @Wen-qqi
 //
 // Lab 11-2
 // If it is a pair programming lab please specify partner below.
